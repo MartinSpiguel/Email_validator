@@ -1,0 +1,1 @@
+This is a simple email validator made with Haskell.
