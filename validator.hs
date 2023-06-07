@@ -4,7 +4,7 @@ domains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com",
 
 -- Validates the email
 validator :: String -> Bool
-validator mail | not (hasAt mail) || not (hasValidDomain mail domains) = False
+validator mail | not (hasAt mail) || not (hasValidDomain mail domains)  || "@" ++ getDomain mail == mail = False
                | otherwise = True
 
 -- Checks if mail has an at
